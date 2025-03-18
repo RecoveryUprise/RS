@@ -1,0 +1,101 @@
+/* Header Container */
+header {
+    background-color: #1B4D3E; /* Deep Forest Green */
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+}
+
+/* Navigation Container */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+/* Logo */
+.logo {
+    height: 70px;
+    width: auto;
+}
+
+/* Menu Toggle Button (Hamburger) */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #E9C46A; /* Golden Wheat */
+    cursor: pointer;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Links */
+.navbar a {
+    color: #E9C46A; /* Golden Wheat */
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+    color: #A8DADC; /* Soft Sky Blue */
+    border-bottom: 2px solid #A8DADC;
+}
+
+/* Active Link Styling */
+.navbar a.active {
+    border-bottom: 2px solid #A8DADC; /* Distinguish active page link */
+}
+
+/* Mobile Adjustments */
+@media (max-width: 900px) {
+    /* Display menu toggle on mobile */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Hide the nav by default */
+    .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #1B4D3E; /* Same as header */
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    /* Show nav when toggled */
+    .navbar.show-nav {
+        display: flex;
+    }
+
+    .navbar a {
+        font-size: 16px;
+        padding: 10px;
+        border-bottom: 1px solid #A8DADC; /* Subtle separator on mobile */
+    }
+
+    .navbar a:last-child {
+        border-bottom: none;
+    }
+}

@@ -1,0 +1,271 @@
+/* General Page Styling */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #F8F9FA; /* Off-White */
+    color: #2C3E50; /* Charcoal Gray for text */
+}
+
+/* Provide room for fixed header */
+body {
+    margin-top: 80px; /* match header's fixed height if needed */
+    flex-grow: 1;
+}
+
+/* Subtle divider between sections */
+section {
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Hero Block */
+.hero-block {
+    width: 100%;
+    background: linear-gradient(to right, #005F73, #1B4D3E); /* Pacific Blue to Forest Green */
+    color: #FFFFFF;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px; /* Reduced from 60px to 40px */
+    box-sizing: border-box;
+}
+
+.hero-content {
+    max-width: 1000px;
+    width: 90%;
+}
+
+.hero-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.hero-buttons .button.secondary {
+    background: #A8DADC; /* Soft Sky Blue */
+    color: #1B4D3E;      /* Deep Forest Green */
+}
+
+/* About Block (Two-Column Layout) */
+.about-block {
+    width: 100%;
+    padding: 40px 20px; /* Reduced from 60px to 40px */
+    box-sizing: border-box;
+    background: #fdfdfd; /* Slightly off-white to differentiate from main bg */
+}
+
+.about-container {
+    max-width: 1200px;
+    width: 90%;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* so columns stack on mobile */
+    margin: 0 auto;
+}
+
+/* About Section Columns */
+.about-text, .about-image {
+    flex: 1 1 50%; /* Both columns roughly 50% each on large screens */
+    min-width: 300px;
+}
+
+/* Text Styling */
+.about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #1B4D3E; /* Deep Forest Green */
+}
+
+.about-text p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+/* Image Styling */
+.about-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.responsive-img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+/* Priorities Block */
+.priorities-block {
+    width: 100%;
+    padding: 40px 20px; /* Reduced from 60px to 40px */
+    text-align: center;
+    background: #F8F9FA; /* Off-White */
+}
+
+.priorities-block h2 {
+    font-size: 2rem;
+    color: #1B4D3E;
+    margin-bottom: 30px;
+}
+
+.priorities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.priority-card {
+    background: #FFFFFF;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.priority-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #005F73; /* Pacific Blue */
+}
+
+.priority-card p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #2C3E50;
+}
+
+/* Keep Learn More button at bottom */
+.learn-more {
+    margin-top: auto; /* pushes the button down */
+    align-self: flex-start; /* or 'center' if you want center aligned */
+    background-color: #E9C46A; /* Golden Wheat */
+    color: #2C3E50;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+.learn-more:hover {
+    background-color: #D4A857;
+}
+
+/* Get Involved Block */
+.get-involved-block {
+    width: 100%;
+    padding: 40px 20px; /* Reduced from 60px to 40px */
+    text-align: center;
+    background: #1B4D3E; /* Deep Forest Green */
+    color: #FFFFFF;
+}
+
+.get-involved-block h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #E9C46A; /* Golden Wheat */
+}
+
+.get-involved-block p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    color: #A8DADC; /* Soft Sky Blue */
+}
+
+/* Facebook Feed Block */
+.facebook-feed-block {
+    width: 100%;
+    padding: 40px 20px; /* Reduced from 60px to 40px */
+    text-align: center;
+    background: #F8F9FA; /* Off-White */
+}
+
+.facebook-feed-block h2 {
+    font-size: 2rem;
+    color: #1B4D3E;
+    margin-bottom: 20px;
+}
+
+.facebook-feed-block p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #2C3E50;
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    background-color: #005F73; /* Pacific Blue */
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.button:hover {
+    background-color: #003D4D;
+    transform: scale(1.05);
+}
+
+.button.secondary {
+    background-color: #A8DADC; /* Soft Sky Blue */
+    color: #005F73; /* Pacific Blue */
+    font-weight: bold;
+}
+
+.button.secondary:hover {
+    background-color: #78B5B5; /* Slightly darker teal */
+}
+
+/* Mobile Menu Adjustments (if needed) */
+.show-nav {
+    display: flex !important;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 900px) {
+    .about-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .priority-card {
+        text-align: center;
+    }
+
+    .learn-more {
+        align-self: center; /* button center for mobile if desired */
+    }
+}
